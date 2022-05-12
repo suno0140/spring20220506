@@ -5,11 +5,11 @@ import lombok.Data;
 @Data
 public class CustomerDto {
 
-	private String name;
+	private int id;
 	private String customerName;
 	private String contactName;
-	private String postalCode;
 	private String address;
 	private String city;
+	private String postalCode;
 	private String country;
 }
