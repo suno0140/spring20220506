@@ -1,5 +1,6 @@
 package com.zerock.service.ex03;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,20 @@ public class Ex05Service {
 		int cnt = mapper.updateBoard(board);
 		
 		return cnt == 1;
+	}
+
+	public boolean removeBoardById(int id) {
+		int cnt = mapper.deleteBoard(id);
+		
+		return cnt == 1;
+	}
+
+	public boolean addBoard(BoardDto board) {
+		board.setInserted(LocalDateTime.now());
+		
+		int cnt = mapper.insertBoard(board);
+		
+		return false;
 	}
 	
 }
