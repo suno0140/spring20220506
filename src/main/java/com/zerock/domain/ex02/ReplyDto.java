@@ -1,11 +1,13 @@
 package com.zerock.domain.ex02;
 
+import java.time.LocalDateTime;
+
 import lombok.Data;
 
 @Data
 public class ReplyDto {
 	private int id;
-	private int boardId; // board_id column < 원래 이건데 별칭 잘 주기
+	private int boardId; // board_id column과 매칭 <  별칭 잘 쓸 것
 	private String content;
 	private LocalDateTime inserted;
 }
