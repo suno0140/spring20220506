@@ -33,5 +33,11 @@ public class Ex06Service {
 		return cnt == 1;
 	}
 
+	public boolean modifyReply(ReplyDto reply) {
+		int cnt = mapper.updateReply(reply);
+		
+		return cnt == 1;
+	}
+
 }
 

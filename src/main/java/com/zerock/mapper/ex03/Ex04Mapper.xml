@@ -27,6 +27,12 @@
 		WHERE id = #{id}
 	</delete>
 	
+	<update id="updateReply">
+		UPDATE Reply
+		SET content = #{content }
+		WHERE id = #{id }
+	</update>
+	
 	<delete id="deleteReplyByBoard">
 	DELETE FROM Reply
 	WHERE board_id = #{boardId }
